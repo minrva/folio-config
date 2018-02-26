@@ -1,0 +1,8 @@
+{
+  "srvcId": "circulation-4.4.0",
+  "nodeId": "10.0.2.15",
+  "descriptor": {
+    "dockerImage": "folioorg/mod-circulation:v4.4.0",
+    "dockerPull": false
+  }
+}

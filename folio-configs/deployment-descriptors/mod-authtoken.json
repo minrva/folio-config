@@ -1,0 +1,8 @@
+{
+  "srvcId": "authtoken-module-0.6.1",
+  "nodeId": "10.0.2.15",
+  "descriptor": {
+    "dockerImage": "folioorg/mod-authtoken:v0.6.1",
+    "dockerPull": false
+  }
+}

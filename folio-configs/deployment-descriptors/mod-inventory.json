@@ -1,0 +1,14 @@
+{
+  "srvcId": "inventory-5.1.1",
+  "nodeId": "10.0.2.15",
+  "descriptor": {
+    "dockerImage": "folioorg/mod-inventory:v5.1.1",
+    "env": [
+      {
+        "name": "JAVA_OPTS",
+        "value": "-Dorg.folio.metadata.inventory.storage.type=okapi"
+      }
+    ],
+    "dockerPull": false
+  }
+}
