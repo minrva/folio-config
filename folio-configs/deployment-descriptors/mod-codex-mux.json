@@ -1,8 +1,8 @@
 {
-  "srvcId" : "mod-authtoken-2.0.2-SNAPSHOT.34",
+  "srvcId" : "mod-codex-mux-2.2.3-SNAPSHOT.60",
   "nodeId": "10.0.2.15",
   "descriptor" : {
-    "dockerImage" : "folioci/mod-authtoken:2.0.2-SNAPSHOT.34",
+    "dockerImage" : "folioci/mod-codex-mux:2.2.3-SNAPSHOT.60",
     "dockerArgs" : {
       "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
     },

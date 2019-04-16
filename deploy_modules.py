@@ -1,4 +1,4 @@
-# pylint: disable=invalid-name
+#!/usr/bin/env python3
 """Deploys Okapi modules."""
 import os
 import json

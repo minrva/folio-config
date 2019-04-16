@@ -1,14 +1,13 @@
 {
-  "srvcId": "inventory-5.1.1",
+  "srvcId" : "mod-inventory-10.1.0-SNAPSHOT.110",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-inventory:v5.1.1",
-    "env": [
-      {
-        "name": "JAVA_OPTS",
-        "value": "-Dorg.folio.metadata.inventory.storage.type=okapi"
-      }
-    ],
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-inventory:10.1.0-SNAPSHOT.110",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "9403/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Dorg.folio.metadata.inventory.storage.type=okapi" }        ],
+        "dockerPull" : false
   }
 }

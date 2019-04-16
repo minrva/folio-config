@@ -1,0 +1,11 @@
+{
+  "srvcId" : "mod-kb-ebsco-1.0.2-SNAPSHOT.155",
+  "nodeId": "10.0.2.15",
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-kb-ebsco:1.0.2-SNAPSHOT.155",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "dockerPull" : false
+  }
+}

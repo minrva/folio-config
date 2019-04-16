@@ -1,8 +1,13 @@
 {
-  "srvcId": "circulation-4.4.0",
+  "srvcId" : "mod-circulation-12.1.0-SNAPSHOT.176",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-circulation:v4.4.0",
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-circulation:12.1.0-SNAPSHOT.176",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "9801/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Xmx256m" }        ],
+        "dockerPull" : false
   }
 }

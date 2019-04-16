@@ -1,0 +1,17 @@
+#
+# FOLIO okapi-deploy configuration
+#
+
+# The okapi-deploy service posts a deployment descriptors to a running Okapi
+# Stopping the service calls the okapi-undeploy script to delete all
+# running instances on the Okapi node.
+
+okapi_url="http://10.0.2.15:9130"
+modules="mod-inventory-storage mod-users mod-permissions mod-login mod-password-validator mod-users-bl mod-authtoken mod-configuration mod-circulation-storage mod-circulation mod-kb-ebsco mod-finance-storage mod-inventory mod-orders-storage mod-orders mod-login-saml mod-codex-mux mod-notify mod-notes mod-tags mod-feesfines mod-vendors mod-codex-inventory mod-codex-ekb mod-rtac"
+module_ids="mod-inventory-storage-13.1.0-SNAPSHOT.184 mod-users-15.3.0-SNAPSHOT.54 mod-permissions-5.4.0-SNAPSHOT.33 mod-login-4.5.1-SNAPSHOT.27 mod-password-validator-1.0.1-SNAPSHOT.11 mod-users-bl-4.0.4-SNAPSHOT.36 mod-authtoken-2.0.2-SNAPSHOT.34 mod-configuration-5.0.2-SNAPSHOT.49 mod-circulation-storage-6.1.2-SNAPSHOT.120 mod-circulation-12.1.0-SNAPSHOT.176 mod-kb-ebsco-1.0.2-SNAPSHOT.155 mod-finance-storage-1.0.1-SNAPSHOT.4 mod-inventory-10.1.0-SNAPSHOT.110 mod-orders-storage-1.0.1-SNAPSHOT.14 mod-orders-1.0.0-SNAPSHOT.23 mod-login-saml-1.2.2-SNAPSHOT.31 mod-codex-mux-2.2.3-SNAPSHOT.60 mod-notify-1.2.0-SNAPSHOT.56 mod-notes-2.2.0-SNAPSHOT.64 mod-tags-0.2.0-SNAPSHOT.28 mod-feesfines-15.0.2-SNAPSHOT.17 mod-vendors-1.0.2-SNAPSHOT.26 mod-codex-inventory-1.4.0-SNAPSHOT.64 mod-codex-ekb-1.0.1-SNAPSHOT.73 mod-rtac-1.2.0-SNAPSHOT.18"
+
+declare -A okapi_env
+# Enter Okapi environment variables here, e.g.:
+# okapi_env=([db.host]=localhost)
+okapi_env=([db.host]="10.0.2.15" [db.port]="5432" [db.database]="okapi_modules" [db.username]="folio_admin" [db.password]="folio_admin" [db.maxPoolSize]="5")
+

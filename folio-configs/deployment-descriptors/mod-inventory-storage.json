@@ -1,30 +1,13 @@
 {
-  "srvcId": "inventory-storage-5.1.0",
+  "srvcId" : "mod-inventory-storage-13.1.0-SNAPSHOT.184",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-inventory-storage:v5.1.0",
-    "env": [
-      {
-        "name": "db.host",
-        "value": "10.0.2.15"
-      },
-      {
-        "name": "db.port",
-        "value": "5432"
-      },
-      {
-        "name": "db.username",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.password",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.database",
-        "value": "okapi_modules"
-      }
-    ],
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-inventory-storage:13.1.0-SNAPSHOT.184",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Xmx512m" }        ],
+        "dockerPull" : false
   }
 }

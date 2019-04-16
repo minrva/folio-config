@@ -1,30 +1,13 @@
 {
-  "srvcId": "permissions-module-4.0.4",
+  "srvcId" : "mod-permissions-5.4.0-SNAPSHOT.33",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-permissions:v4.0.4",
-    "env": [
-      {
-        "name": "db.host",
-        "value": "10.0.2.15"
-      },
-      {
-        "name": "db.port",
-        "value": "5432"
-      },
-      {
-        "name": "db.username",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.password",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.database",
-        "value": "okapi_modules"
-      }
-    ],
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-permissions:5.4.0-SNAPSHOT.33",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Xmx512m" }        ],
+        "dockerPull" : false
   }
 }

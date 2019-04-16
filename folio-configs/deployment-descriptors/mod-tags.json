@@ -1,0 +1,11 @@
+{
+  "srvcId" : "mod-tags-0.2.0-SNAPSHOT.28",
+  "nodeId": "10.0.2.15",
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-tags:0.2.0-SNAPSHOT.28",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "dockerPull" : false
+  }
+}

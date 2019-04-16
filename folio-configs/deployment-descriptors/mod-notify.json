@@ -1,30 +1,13 @@
 {
-  "srvcId": "mod-notify-0.1.1",
+  "srvcId" : "mod-notify-1.2.0-SNAPSHOT.56",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-notify:v0.1.1",
-    "env": [
-      {
-        "name": "db.host",
-        "value": "10.0.2.15"
-      },
-      {
-        "name": "db.port",
-        "value": "5432"
-      },
-      {
-        "name": "db.username",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.password",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.database",
-        "value": "okapi_modules"
-      }
-    ],
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-notify:1.2.0-SNAPSHOT.56",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Xmx256m" }        ],
+        "dockerPull" : false
   }
 }

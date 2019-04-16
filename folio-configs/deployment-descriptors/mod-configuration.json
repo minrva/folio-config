@@ -1,30 +1,13 @@
 {
-  "srvcId": "configuration-2.0.0",
+  "srvcId" : "mod-configuration-5.0.2-SNAPSHOT.49",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-configuration:v2.0.0",
-    "env": [
-      {
-        "name": "db.host",
-        "value": "10.0.2.15"
-      },
-      {
-        "name": "db.port",
-        "value": "5432"
-      },
-      {
-        "name": "db.username",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.password",
-        "value": "folio_admin"
-      },
-      {
-        "name": "db.database",
-        "value": "okapi_modules"
-      }
-    ],
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-configuration:5.0.2-SNAPSHOT.49",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Xmx256m" }        ],
+        "dockerPull" : false
   }
 }

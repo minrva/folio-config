@@ -1,8 +1,13 @@
 {
-  "srvcId": "mod-users-bl-2.0.2",
+  "srvcId" : "mod-users-bl-4.0.4-SNAPSHOT.36",
   "nodeId": "10.0.2.15",
-  "descriptor": {
-    "dockerImage": "folioorg/mod-users-bl:v2.0.2",
-    "dockerPull": false
+  "descriptor" : {
+    "dockerImage" : "folioci/mod-users-bl:4.0.4-SNAPSHOT.36",
+    "dockerArgs" : {
+      "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+            "env" : [
+          { "name" : "JAVA_OPTIONS", "value" : "-Xmx256m" }        ],
+        "dockerPull" : false
   }
 }

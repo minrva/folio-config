@@ -1,8 +1,8 @@
 {
-  "srvcId" : "mod-authtoken-2.0.2-SNAPSHOT.34",
+  "srvcId" : "mod-orders-1.0.0-SNAPSHOT.23",
   "nodeId": "10.0.2.15",
   "descriptor" : {
-    "dockerImage" : "folioci/mod-authtoken:2.0.2-SNAPSHOT.34",
+    "dockerImage" : "folioci/mod-orders:1.0.0-SNAPSHOT.23",
     "dockerArgs" : {
       "HostConfig" : { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
     },
